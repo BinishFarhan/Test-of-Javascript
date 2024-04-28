@@ -1,5 +1,5 @@
 // from Mam Faiza 
-            //=======Q1====== 
+//=======Q1====== 
 // const str = prompt("Enter any string")
 
 // function Palindrom(str) {
@@ -32,7 +32,7 @@
 
 
 
-            // =====Q3====
+// =====Q3====
 
 // const arr = [5, 1000000001, 1000000002, 1000000003, 1000000004 , 1000000005] 
 // const newArr = arr.reduce((acc, item) => acc + item)
@@ -60,18 +60,14 @@
 
 // ==========Q4===== //
 
-function objdisplay(library){
-for (var i = 0; i < library.length; i++) 
-   {
-    var book = "'" + library[i].title + "'" + ' by ' + library[i].author + ".";
-    if (library[i].readingStatus) {
-      console.log("Already read " + book);
-    } else
-    {
-     console.log("You still need to read " + book);
-    }
-   }
+function objdisplay(library) {
+    library.forEach(element => {
+        const card = document.getElementById("book")
+        card.innerHTML += `<h1>${element.author}</h1>
+        <h2>${element.title}</h2>
+        <h2>${element.readingStatus ? "already read" : "not read yet"}</h2>`
 
+    });
 }
 var library = [
     { author: "Bill Gates", title: 'The Road Ahead', readingStatus: true },
@@ -100,7 +96,7 @@ console.log(converttoCoins(48, [25, 5, 5, 10]))
 
 function twoSum(nums, target) {
     const map = new Map();
-   
+
     for (let i = 0; i < nums.length; i++) {
         const comp = target - nums[i];
         if (map.has(comp)) {
@@ -108,12 +104,12 @@ function twoSum(nums, target) {
         }
         map.set(nums[i], i);
     }
-        return [];
+    return [];
 }
-const result = twoSum([2,7,11,15] , 9)
+const result = twoSum([2, 7, 11, 15], 9)
 console.log("🚀 ~ result:", result)
 
- //  ======Q1 ======
+//  ======Q1 ======
 function maxProductSubarray(nums) {
     if (nums.length === 0) return 0;
 
